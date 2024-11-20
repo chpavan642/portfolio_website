@@ -1,0 +1,470 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+
+}
+
+nav {
+    background-color: white;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+nav a:hover {
+    background-color: rgb(161, 150, 193);
+
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0%;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transition: right 0.3s ease-in-out;
+}
+
+.sidebar .li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+/* Hero Section Styles */
+.hero-section {
+    background: linear-gradient(to right, #247ddc, #6610f2);
+    color: #fff;
+    text-align: center;
+    padding: 4rem 1rem;
+}
+
+.hero-section .profile-image {
+    margin: 0 auto 1rem;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+
+}
+
+.hero-section .profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-section .name {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.hero-section .tagline {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.hero-section .description {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    font-size: 1rem;
+}
+
+.hero-section .btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: #fff;
+    color: #007bff;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.hero-section .btn:hover {
+    background: #007bff;
+    color: #fff;
+}
+
+/* Experiences Section Styles */
+.experiences-section {
+    background-color: #f9f9f9;
+    padding: 4rem 1rem;
+}
+
+.experiences-section .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.experience-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.experience-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.experience-item h3 {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-bottom: 0.5rem;
+}
+
+.experience-duration {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.experience-description {
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Awards Section Styles */
+.awards-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.awards-list {
+    display: flex;
+    /* Arrange items in a single row */
+    overflow-x: auto;
+    grid-template-columns: repeat(5, 1fr);
+    /* Enable horizontal scrolling */
+    gap: 20px;
+    /* Add spacing between items */
+    padding: 10px;
+    scroll-snap-type: x mandatory;
+    /* Optional: Smooth snapping */
+}
+
+.award-item {
+    display: flex;
+    flex-direction: column;
+    /* Change this to stack the content vertically */
+    align-items: center;
+    /* Center all content horizontally */
+    justify-content: center;
+    /* Center content vertically if needed */
+    min-width: 300px;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 8px;
+    background: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    height: 300px;
+    scroll-snap-align: center;
+    /* Increase height */
+    /* Optional: Align items during scroll */
+}
+
+.award-icon {
+    font-size: 2rem;
+    /* Adjust the icon size */
+    color: #ffa500;
+    margin-bottom: 10px;
+}
+
+.award-details h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.award-description {
+    font-size: 0.85rem;
+    color: #555;
+}
+
+/* Contact Section Styles */
+.contact-section {
+    background-color: #f9f9f9;
+    padding: 4rem 1rem;
+}
+
+.contact-section .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.contact-form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+.contact-form h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #333;
+}
+
+.contact-form label {
+    display: flex;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    padding: 1rem 2rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #0056b3;
+}
+
+.professor-details {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+.professor-details h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #333;
+}
+
+.professor-details p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.professor-details a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.professor-details a:hover {
+    text-decoration: underline;
+}
+
+/* Ensure responsiveness */
+@media (max-width: 800px) {
+    .hideOnMoblie {
+        display: none;
+    }
+
+    .contact-section .container {
+        flex-direction: column;
+    }
+}
+
+/* Styling the menu button */
+.menu-btn {
+    position: absolute;
+    top: 20px;
+    /* Ensure it is within the viewport */
+    left: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 9999;
+    /* Higher than the dropdown menu */
+    color: #007bff;
+    /* More visible color */
+    display: block;
+    /* Ensure it's not accidentally set to `none` */
+    overflow: visible;
+}
+
+.menu-btn i {
+    color: #007bff;
+    color: #007bff;
+}
+
+/* Styling the dropdown menu */
+.dropdown-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    display: none;
+    /* Initially hidden */
+    flex-direction: column;
+    padding-top: 60px;
+    /* Adjust for the menu button */
+    z-index: 999;
+}
+
+.dropdown-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu li {
+    padding: 15px;
+    text-align: left;
+}
+
+.dropdown-menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #555;
+}
+
+/* Show the menu when active */
+.dropdown-menu.active {
+    display: flex;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-left,
+.footer-middle,
+.footer-right {
+    margin: 10px;
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-left h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin: 5px 0;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-right p {
+    margin: 5px 0;
+}
+
+.footer-right a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-right a:hover {
+    text-decoration: underline;
+}
